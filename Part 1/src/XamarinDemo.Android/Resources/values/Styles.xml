@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="colorPrimary">#6686ff</item>
+    <item name="colorPrimaryDark">#5e79dc</item>
+    <item name="colorAccent">#525252</item>
+    <item name="android:textColorPrimary">#ffffff</item>
+  </style>
+ </resources>

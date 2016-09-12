@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Developers"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/textDevelopers"
+                    android:padding="10dp"
+                    android:textSize="36sp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Countries"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/textCountries"
+                    android:padding="10dp"
+                    android:textSize="36sp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="20dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/location" />
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleSmall"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/textLocation"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/buttonUpload"
+        android:enabled="false"
+        android:background="#ff7f00"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Upload location" />
+    <Button
+        android:id="@+id/buttonUsers"
+        android:background="#7f007f"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Show users" />
+</LinearLayout>
