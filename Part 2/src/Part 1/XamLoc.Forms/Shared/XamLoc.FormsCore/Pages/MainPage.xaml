@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="White" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamLoc.FormsCore.MainPage">
+	<ContentPage.Content>
+		<StackLayout
+			Spacing="0"
+			Orientation="Vertical">
+			<Grid
+				BackgroundColor="#6686ff"
+				ColumnSpacing="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<StackLayout Grid.Column="0"
+					Padding="20"
+					Orientation="Vertical">
+					<Label
+						HorizontalOptions="Center"
+						Text="Developers"
+						TextColor="White"/>
+					<Label
+						x:Name="TextDevelopers"
+						FontSize="44"
+						HorizontalOptions="Center"
+						Text="0"
+						TextColor="White"/>
+				</StackLayout>
+				<StackLayout Grid.Column="1"
+					Padding="20"
+					Orientation="Vertical">
+					<Label
+						HorizontalOptions="Center"
+						Text="Countries"
+						TextColor="White"/>
+					<Label
+						x:Name="TextCountries"
+						FontSize="44"
+						HorizontalOptions="Center"
+						Text="0"
+						TextColor="White"/>
+				</StackLayout>
+			</Grid>
+			<StackLayout
+					Padding="20"
+					BackgroundColor="#6686ff"
+					Orientation="Horizontal">
+        <Image
+           HeightRequest="40"
+						WidthRequest="40"
+						Source="location.png"/>
+					<ActivityIndicator
+            HeightRequest="40"
+						WidthRequest="40"
+					  x:Name="Loader"
+						IsVisible="true"
+						IsRunning="true"
+						Color="White"/>
+					<Label
+						VerticalOptions="Center"
+						x:Name="TextCountry"
+						TextColor="White"/>
+			</StackLayout>
+			<Button
+				x:Name="ButtonUpload"
+				Clicked="HandleUpload_Clicked"
+				IsEnabled="false"
+				Margin="40,20"
+				Text="Upload location"
+				TextColor="White"
+				BackgroundColor="#ff7f00"/>
+			<Button
+				Clicked="HandleDevelopers_Clicked"
+				Margin="40,0"
+				TextColor="White"
+				Text="Show users"
+				BackgroundColor="#7f007f" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

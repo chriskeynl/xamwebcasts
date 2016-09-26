@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#6889fc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#6889fc" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Developers"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/textDevelopers"
+                    android:padding="10dp"
+                    android:textSize="36sp"
+                    local:MvxBind="Text DashboardStatistics.NumberOfDevelopers"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Countries"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/textCountries"
+                    android:padding="10dp"
+                    android:textSize="36sp"
+                    local:MvxBind="Text DashboardStatistics.NumberOfCountries"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="20dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/location" />
+            <ProgressBar
+                local:MvxBind="Visibility IsButtonUploadEnabled,Converter=InvertedVisibility"
+                style="?android:attr/progressBarStyleSmall"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                local:MvxBind="Text CurrentLocationText"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        local:MvxBind="Text ButtonUploadText;Click ButtonUploadCommand;Enabled IsButtonUploadEnabled;BackgroundColor ButtonUploadColor,Converter=NativeColor"
+        android:background="#ff7f00"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+    <Button
+        local:MvxBind="Text ButtonDevelopersText;Click ButtonDevelopersCommand;BackgroundColor ButtonDevelopersColor,Converter=NativeColor"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

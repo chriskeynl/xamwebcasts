@@ -1,0 +1,15 @@
+﻿<Application
+    x:Class="XamLoc.MVX.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XamLoc.MVX.UWP"
+    xmlns:nativeConverters="using:XamLoc.MVX.UWP.NativeConverters"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <ResourceDictionary>
+            <nativeConverters:NativeColorConverter x:Name="NativeColor" />
+            <nativeConverters:NativeInvertedVisibilityConverter x:Name="InvertedVisibility" />
+            <nativeConverters:NativeVisibilityConverter x:Name="Visibility" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

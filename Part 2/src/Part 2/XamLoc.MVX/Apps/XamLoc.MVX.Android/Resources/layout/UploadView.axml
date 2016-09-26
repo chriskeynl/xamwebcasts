@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:elevation="8dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#6889fc" />
+    <EditText
+        android:textColor="#000000"
+        local:MvxBind="Hint NamePlaceHolderText;Text NameText"
+        android:textColorHint="#cccccc"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="#000000"
+        local:MvxBind="Text CurrentLocationText"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        local:MvxBind="Text ButtonUploadText;Click ButtonUploadCommand;BackgroundColor ButtonUploadColor,Converter=NativeColor"
+        android:id="@+id/buttonUpload"
+        android:background="#ff7f00"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Upload" />
+</LinearLayout>
